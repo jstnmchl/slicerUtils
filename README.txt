@@ -1,2 +1,2 @@
 A collection of MATLAB functions that allow for bringing data produced by Slicer into and out of MATLAB. 
-Focus is on simple numerical data (e.g. points, linear tranforms) and not more complicated, visualization heavy data (e.g. 3D images).
+Focus is on simple numerical data (e.g. points, linear tranforms) and not more complicated, visualization-heavy data (e.g. 3D images).
