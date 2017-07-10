@@ -38,6 +38,7 @@ end
 
 T_itkConventions = eye(4);
 T_itkConventions(1:3,:) = reshape(transformVector,3,4);
+T_itkConventions(1:3,1:3) = T_itkConventions(1:3,1:3)';
 end
 
 function [T_slicer] = convertTransfromFromItkToSlicer(T_itk)
@@ -53,5 +54,6 @@ lps2ras(1,1) = -1;
 lps2ras(2,2) = -1;
 
 ras2lps = lps2ras; %diagonal matrixes, therefore same as inverse (M = M^-1)
-T_slicer = inv( lps2ras*T_itk*ras2lps);
+T_slicer = lps2ras*T_itk*ras2lps;
+T_slicer = inv( T_slicer);
 end
