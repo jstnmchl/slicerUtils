@@ -1,5 +1,5 @@
 function [ transform ] = readTransform( filename )
-%loadTransformFromSlcier import affine transform saved from slicer (.mat)
+%readTransform import affine transform saved from slicer (.mat or .h5)
 %as a 4x4 matrix (pre-multiplication/column vector notation). 
 %   Note that function was written for linear transforms only.
 
